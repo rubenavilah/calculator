@@ -1,7 +1,6 @@
 // Variables of the calculator
 // var nombre = prompt("Primero me gustaria saber tu nombre");
 // var bienvenida = alert("Bienvenido a la calculadora " + nombre);
-
   do {
     var data_one = prompt("Ingresa un número");
   } while (isNaN(data_one)==true);
