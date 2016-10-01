@@ -8,6 +8,7 @@ if (typeof data_one === 'string' || data_one instanceof String) {
     prompt("Ingresaste texto, por favor ingresa un número");
   } while (typeof data_one === 'number' || data_one instanceof Number);
 }
+
 var data_two = prompt("Ingresa otro número");
 if (data_two === String) {
   isString();
@@ -26,14 +27,12 @@ var number_two = parseFloat(data_two);
 
 //Sum
 var sum = function(){
-  result = number_one + number_two;
-  return result;
+  return result = number_one + number_two;
 };
 
 //Substraction
 var subs = function(){
-  result = number_one - number_two;
-  return result;
+  return result = number_one - number_two;
 };
 
 //Division
@@ -45,19 +44,39 @@ var div= function(){
 var mult = function(){
   return result = number_one * number_two;
 };
+
+//Module
+var mod = function(){
+  return result = number_one % number_two;
+};
+
 //Switch with operator options
 switch(operator){
-//multi case
-  case 'SUMA' : case 'SUM' : case "+":
-  console.log(sum());
-  break;
-  case 'RESTA': case "-":
-  console.log(subs());
-  break;
-  case 'DIVISIÓN' : case "/":
-  console.log(div());
-  break;
-  case 'MULTIPLICACIÓN': case "*":
-  console.log(mult());
-  break;
+//Sum multicase
+  case "SUMA" : case "SUM" : case "+":
+    console.log(sum());
+    break;
+  case "RESTA": case "SUBTRACTION": case "-":
+    console.log(subs());
+    break;
+  case "MULTIPLICACIÓN": case "MULTIPLICATION": case "*":
+    console.log(mult());
+    break;
+  case "DIVISIÓN" : case "DIVISION": case "/":
+  //obtiener first result
+      var result=div();
+  // evaluates if the result gave isNaN, Infinity or Error
+        if (isNaN(result)==true || result===Infinity || result==="Error")
+            console.log("Esta operación no es posible");
+        else
+  //f it's not isNaN, Infinity or Error then print
+            console.log(result);
+    break;
+  case "MÓDULO": case "MODULE" : case "%":
+      var result=mod();
+        if (isNaN(result)==true || result===Infinity || result==="Error")
+            console.log("Esta operación no es posible");
+        else
+            console.log(result);
+    break;
 }
