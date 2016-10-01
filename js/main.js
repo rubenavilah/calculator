@@ -45,23 +45,6 @@ var div= function(){
 var mult = function(){
   return result = number_one * number_two;
 };
-
-// The print
-var print = function(data){
-  console.log(data);
-};
-
-/*
-//The calls
-if (operator === "suma"){
-  sum(number_one, number_two);
-  print(result);
-
-} else if (operator === "resta") {
-  subs(number_one, number_two);
-  print(result);
-}
-*/
 //Switch with operator options
 switch(operator){
 //multi case
