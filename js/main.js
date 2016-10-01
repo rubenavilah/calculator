@@ -2,17 +2,16 @@
 // var nombre = prompt("Primero me gustaria saber tu nombre");
 // var bienvenida = alert("Bienvenido a la calculadora " + nombre);
 
-var data_one = prompt("Ingresa un número");
-if (typeof data_one === 'string' || data_one instanceof String) {
   do {
-    prompt("Ingresaste texto, por favor ingresa un número");
-  } while (typeof data_one === 'number' || data_one instanceof Number);
-}
+    var data_one = prompt("Ingresa un número");
+  } while (isNaN(data_one)==true);
+
 
 var data_two = prompt("Ingresa otro número");
 if (data_two === String) {
   isString();
 }
+
 var operator = prompt("Ingresa un operador");
 operator = operator.toUpperCase();
 
