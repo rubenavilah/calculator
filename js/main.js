@@ -4,6 +4,7 @@
 var data_one = prompt("Ingresa un número");
 var data_two = prompt("Ingresa otro número");
 var operator = prompt("Ingresa un operador");
+operator = operator.toUpperCase();
 
 //prompts to number
 var number_one = parseFloat(data_one);
@@ -21,16 +22,45 @@ var subs = function(){
   return result;
 };
 
+//Division
+var div= function(){
+  return result = number_one / number_two;
+};
+
+//Multiply
+var mult = function(){
+  return result = number_one * number_two;
+};
+
 // The print
 var print = function(data){
   console.log(data);
 };
 
+/*
 //The calls
 if (operator === "suma"){
   sum(number_one, number_two);
   print(result);
+
 } else if (operator === "resta") {
   subs(number_one, number_two);
   print(result);
+}
+*/
+//Switch with operator options
+switch(operator){
+//multi case
+  case 'SUMA' : case 'SUM' : case "+":
+  console.log(sum());
+  break;
+  case 'RESTA': case "-":
+  console.log(subs());
+  break;
+  case 'DIVISIÓN' : case "/":
+  console.log(div());
+  break;
+  case 'MULTIPLICACIÓN': case "*":
+  console.log(mult());
+  break;
 }
