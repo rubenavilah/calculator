@@ -1,0 +1,58 @@
+@import https://necolas.github.io/normalize.css/5.0.0/normalize.css;
+html, body{
+  height: 100%;
+  min-height: 100%;
+}
+body{
+  position: relative;
+}
+ul {
+  list-style: none;
+  direction: rtl;
+  text-align: left;
+  line-height: 0;
+  font-size: 0;
+  padding: 0;
+  vertical-align: top;
+}
+ul li {
+  display: inline-block;
+}
+button{
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  background: #aebcbf;
+  background: -moz-linear-gradient(-45deg,  #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%);
+  background: -webkit-linear-gradient(-45deg,  #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%);
+  background: linear-gradient(135deg,  #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=1 );
+}
+#operators button{
+  background: #f0b7a1;
+  background: -moz-linear-gradient(-45deg,  #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%);
+  background: -webkit-linear-gradient(-45deg,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%);
+  background: linear-gradient(135deg,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 );
+
+}
+main {
+  margin: 0 auto;
+  width: 326px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#numbers {
+  width: 192px;
+  height: 100%;
+  display: inline-block;
+}
+#operators{
+  width: 130px;
+  display: inline-block;
+}

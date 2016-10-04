@@ -3,7 +3,7 @@
 // var bienvenida = alert("Bienvenido a la calculadora " + nombre);
   do {
     var data_one = prompt("Ingresa un número");
-  } while (isNaN(data_one)==true);
+  } while (isNaN(data_one) === true);
 
 
 var data_two = prompt("Ingresa otro número");
@@ -64,7 +64,7 @@ switch(operator){
   //obtiener first result
       var result=div();
   // evaluates if the result gave isNaN, Infinity or Error
-        if (isNaN(result)==true || result===Infinity || result==="Error")
+        if (isNaN(result)===true || result===Infinity || result==="Error")
             console.log("Esta operación no es posible");
         else
   //f it's not isNaN, Infinity or Error then print
@@ -72,7 +72,7 @@ switch(operator){
     break;
   case "MÓDULO": case "MODULE" : case "%":
       var result=mod();
-        if (isNaN(result)==true || result===Infinity || result==="Error")
+        if (isNaN(result)===true || result===Infinity || result==="Error")
             console.log("Esta operación no es posible");
         else
             console.log(result);
