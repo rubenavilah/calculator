@@ -69,3 +69,8 @@ main {
   position: relative;
   right:67px;
 }
+#input{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}

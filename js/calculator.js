@@ -1,22 +1,15 @@
 var calculator = {
-  op1 : null,
-  op2: null,
+  result : null,
   operador: null,
-  check_input: function(){
+  check_input: function(button){
+    var self = calculator;
     console.log("Check input");
     var input = document.getElementById("input");
     var input_text = input.textContent;
     var input_number = Number(input_text);
     var errors = document.querySelector("#error");
-    if (!Number.isNaN(input_number)) {
-      console.log("Is a number");
-      if (this.opt1 === null) {
-          this.op1 = input_number;
-      }else{
-        this.op2 = input_number;
-      }
-    }else{
-      console.log("Error");
+    if (Number.isNaN(input_number)) {
+      input.value = "";
     }
   },
   set_number: function(button){
@@ -26,6 +19,22 @@ var calculator = {
       console.log(this);
     }; // return
   }, // set_number
+  exec_operator: function(button){
+    var self = calculator;
+    return function() {
+      if (self.result === null) {
+        self.result = input_number;
+      }
+      self.operator = button.textContent;
+    };
+  },
+  clear: function(){
+    document.getElementById("clear");
+    this.result = null;
+    this.operator = null;
+    var input = document.getElementById("input");
+    input.value = "";
+  },
 };
 document.addEventListener("DOMContentLoaded", function(event){
   // Once the Page loads
@@ -42,5 +51,8 @@ document.addEventListener("DOMContentLoaded", function(event){
       "click",
       calculator.set_number(button_numbers[i]));
   }//addEventListener
+  var button_clear = controlpad.querySelector("#clear");
+  button_clear.addEventListener("click", calculator.clear);
   console.log("Initiated");
+
 });
