@@ -46,6 +46,8 @@ main {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  background: #262427;
+  border-radius: 20px;
 }
 #numbers {
   width: 192px;
@@ -55,4 +57,15 @@ main {
 #operators{
   width: 130px;
   display: inline-block;
+}
+#operators li:nth-child(5) button{
+  background: #fceabb;
+  background: -moz-linear-gradient(-45deg,  #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: -webkit-linear-gradient(-45deg,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%);
+  background: linear-gradient(135deg,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 );
+}
+#operators li:nth-child(7){
+  position: relative;
+  right:67px;
 }
